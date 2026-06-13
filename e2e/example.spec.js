@@ -22,8 +22,12 @@ test('Test Star', async ({ page }) => {
   await page.goto('https://playwright.dev/');
   
   // Click the star button.
-  //await page.getByRole('link', { name: 'Star microsoft/playwright on' }).click();
-  await page.getByRole('link', { name: /Star microsoft\/playwright/ }).click();
+  await page.getByRole('link', { name: 'Star microsoft/playwright on' }).click();
+ 
+ 
+  //await page.getByRole('link', { name: /Star microsoft\/playwright/ }).click();
+  
+  
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'playwright' })).toBeVisible();
 
